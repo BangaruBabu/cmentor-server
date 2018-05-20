@@ -1,0 +1,13 @@
+{
+  "name": "careermentorapi",
+  "version": "1.0.0",
+  "description": "Servers data from MySQL in the form of JSON",
+  "main": "server.js",
+  "repository": "https://github.com/BangaruBabu/cmentor-server.git",
+  "author": "BangaruBabu",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
