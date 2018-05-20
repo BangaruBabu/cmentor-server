@@ -58,20 +58,20 @@ app.get('/api/v1/district/:id', function (req, res) {
 // Add a new todo  
 app.post('/api/v1/institute', function (req, res) {
  
-    let institute = req.body.institute;
- 
-    if (!task) {
-        return res.status(400).send({ error:true, message: 'Please provide task' });
+    let institute = req.body;
+    
+    if (!institute) {
+        return res.status(400).send({ error:true, message: 'Please provide institute' });
     }
  
-    pool.query("INSERT INTO CM_Institute_master SET ? ", { institute: institute }, function (error, results, fields) {
+    pool.query("INSERT INTO CM_Institute_master SET ? ", institute, function (error, results, fields) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'New task has been created successfully.' });
+        return res.send({ error: false, data: results, message: 'New institute has been created successfully.' });
     });
 });
 
  
 // port must be set to 8080 because incoming http requests are routed from port 80 to port 8080
 app.listen(3000, function () {
-    console.log('Node server  is running on port 3000 to exxpose RESTAPIs');
+    console.log('Node server  is running on port 3000 to exxpose RESTAPIS');
 });
