@@ -1,4 +1,4 @@
-Career Guide Mentor REST API
+Career  Mentor REST API
 ============================
 ### Pre Requisites
 * Install Node
