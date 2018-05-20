@@ -47,11 +47,26 @@ app.get('/api/v1/districts', function (req, res) {
  
 // Retrieve districts by  state id 
 app.get('/api/v1/district/:id', function (req, res) {
- 
     let state_id = req.params.id;
     pool.query('SELECT * FROM CM_district where state_ref=?', state_id, function (error, results, fields) {
         if (error) throw error;
         return res.send({ error: false, data: results, message: 'district list by state id.' });
+    });
+});
+
+
+// Add a new todo  
+app.post('/api/v1/institute', function (req, res) {
+ 
+    let institute = req.body.institute;
+ 
+    if (!task) {
+        return res.status(400).send({ error:true, message: 'Please provide task' });
+    }
+ 
+    pool.query("INSERT INTO CM_Institute_master SET ? ", { institute: institute }, function (error, results, fields) {
+        if (error) throw error;
+        return res.send({ error: false, data: results, message: 'New task has been created successfully.' });
     });
 });
 
