@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `cmentordb` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `cmentordb`;
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: 127.0.0.1    Database: cmentordb
@@ -25,7 +23,7 @@ DROP TABLE IF EXISTS `CM_Institute_master`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `CM_Institute_master` (
-  `institute_id` int(11) NOT NULL,
+  `institute_id` int(11) NOT NULL AUTO_INCREMENT,
   `board_or_university` varchar(225) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
   `district_id` int(11) DEFAULT NULL,
@@ -122,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-20  9:02:56
+-- Dump completed on 2018-05-20 10:34:15
