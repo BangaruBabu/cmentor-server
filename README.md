@@ -6,6 +6,6 @@ Career Guide Mentor REST API
 
 
 ### Run Application
-* Clone application
+* Clone application `git clone https://github.com/BangaruBabu/cmentor-server.git`
 * Hit `yarn install`
 * Hit `yarn start`
