@@ -55,7 +55,7 @@ app.get('/api/v1/district/:id', function (req, res) {
 });
 
 
-// Add a new todo  
+// Add a new institute  
 app.post('/api/v1/institute', function (req, res) {
  
     let institute = req.body;
