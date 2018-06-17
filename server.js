@@ -69,7 +69,7 @@ app.post('/api/v1/institute', function (req, res) {
         return res.send({ error: false, data: results, message: 'New institute has been created successfully.' });
     });
 });
-
+console.log("mybranch-satish");
  
 // port must be set to 8080 because incoming http requests are routed from port 80 to port 8080
 app.listen(3000, function () {
